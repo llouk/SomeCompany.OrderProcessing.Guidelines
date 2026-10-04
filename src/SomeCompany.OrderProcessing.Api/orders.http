@@ -1,0 +1,29 @@
+# Create a dev token first:  dotnet user-jwts create --project src/SomeCompany.OrderProcessing.Api --name customer-1
+@host = http://localhost:5080
+@token = paste-token-here
+
+### Place an order (try paymentToken "tok_declined", or 3x SKU-MONITOR to see a rejection)
+POST {{host}}/api/v1/orders
+Authorization: Bearer {{token}}
+Content-Type: application/json
+Idempotency-Key: 7d1c2b0e-demo-0001
+
+{
+  "shippingAddress": { "line1": "1 Main St", "city": "Athens", "postalCode": "10552", "countryCode": "GR" },
+  "lines": [
+    { "sku": "SKU-KEYBOARD", "quantity": 1 },
+    { "sku": "SKU-MOUSE", "quantity": 2 }
+  ],
+  "paymentToken": "tok_visa"
+}
+
+### Get an order
+GET {{host}}/api/v1/orders/{{orderId}}
+Authorization: Bearer {{token}}
+
+### Cancel an order
+POST {{host}}/api/v1/orders/{{orderId}}/cancel
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "reason": "Changed my mind" }

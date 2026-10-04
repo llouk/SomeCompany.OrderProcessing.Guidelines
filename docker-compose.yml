@@ -1,0 +1,6 @@
+# Local infrastructure. Run the API itself with `dotnet run` (dev JWTs live in user secrets on the host).
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

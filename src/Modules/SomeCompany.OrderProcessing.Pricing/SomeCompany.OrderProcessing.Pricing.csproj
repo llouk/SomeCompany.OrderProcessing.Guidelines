@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\..\SomeCompany.OrderProcessing.SharedKernel\SomeCompany.OrderProcessing.SharedKernel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="SomeCompany.OrderProcessing.UnitTests" />
+  </ItemGroup>
+</Project>

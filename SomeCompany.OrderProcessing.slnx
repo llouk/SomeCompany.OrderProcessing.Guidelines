@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Modules/SomeCompany.OrderProcessing.Inventory/SomeCompany.OrderProcessing.Inventory.csproj" />
+    <Project Path="src/Modules/SomeCompany.OrderProcessing.Ordering/SomeCompany.OrderProcessing.Ordering.csproj" />
+    <Project Path="src/Modules/SomeCompany.OrderProcessing.Payments/SomeCompany.OrderProcessing.Payments.csproj" />
+    <Project Path="src/Modules/SomeCompany.OrderProcessing.Pricing/SomeCompany.OrderProcessing.Pricing.csproj" />
+    <Project Path="src/Modules/SomeCompany.OrderProcessing.Shipping/SomeCompany.OrderProcessing.Shipping.csproj" />
+    <Project Path="src/SomeCompany.OrderProcessing.Api/SomeCompany.OrderProcessing.Api.csproj" />
+    <Project Path="src/SomeCompany.OrderProcessing.SharedKernel/SomeCompany.OrderProcessing.SharedKernel.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SomeCompany.OrderProcessing.ArchitectureTests/SomeCompany.OrderProcessing.ArchitectureTests.csproj" />
+    <Project Path="tests/SomeCompany.OrderProcessing.UnitTests/SomeCompany.OrderProcessing.UnitTests.csproj" />
+  </Folder>
+</Solution>

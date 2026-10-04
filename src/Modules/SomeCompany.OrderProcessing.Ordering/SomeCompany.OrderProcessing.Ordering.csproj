@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\..\SomeCompany.OrderProcessing.SharedKernel\SomeCompany.OrderProcessing.SharedKernel.csproj" />
+    <!-- Ordering may only use the *.Contracts types of these modules; everything else in them is internal. -->
+    <ProjectReference Include="..\SomeCompany.OrderProcessing.Pricing\SomeCompany.OrderProcessing.Pricing.csproj" />
+    <ProjectReference Include="..\SomeCompany.OrderProcessing.Inventory\SomeCompany.OrderProcessing.Inventory.csproj" />
+    <ProjectReference Include="..\SomeCompany.OrderProcessing.Payments\SomeCompany.OrderProcessing.Payments.csproj" />
+    <ProjectReference Include="..\SomeCompany.OrderProcessing.Shipping\SomeCompany.OrderProcessing.Shipping.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="SomeCompany.OrderProcessing.UnitTests" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="3.3.1" />
+  </ItemGroup>
+</Project>

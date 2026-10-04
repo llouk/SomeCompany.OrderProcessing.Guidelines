@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Deliberately tiny: only primitives every module needs. No business logic lives here. -->
+</Project>
